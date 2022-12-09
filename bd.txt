@@ -1,0 +1,39 @@
+CREATE TABLE Equipment(
+	ID int primary key identity(1,1),
+	Name nvarchar(250));
+	
+CREATE TABLE Users(
+	ID int primary key identity(1,1),
+	Surname nvarchar(250),
+	Name nvarchar(250),
+	Login nvarchar(250),
+	Password nvarchar(250),
+	Type_acc int);
+
+CREATE TABLE Answer(
+	ID int primary key identity(1,1),
+	Name nvarchar(250));
+	
+CREATE TABLE Status(
+	ID int primary key identity(1,1),
+	Name nvarchar(250));
+
+CREATE TABLE Orders(	
+	ID int primary key identity(1,1),
+	Equipment_id int foreign key references Equipment(ID),
+	User_id int foreign key references Users(id),
+	Comment nvarchar(max),
+	Answer_id int foreign key references Answer(ID),
+	Status_id int foreign key references Status(ID));
+	
+INSERT INTO Equipment VALUES (N'Компьютер'), (N'Монитор'), (N'Принтер');
+
+INSERT INTO Users VALUES (N'Иванов', N'Иван', 'admin', 'admin', 1), (N'Петров', N'Петр', 'u1', 'u2', 2), (N'Александров', N'Александр', 'u2', 'u2', 2);
+
+INSERT INTO Answer VALUES(N'На рассмотрении'), (N'Отказ'), (N'Принят');
+
+INSERT INTO Status VALUES (N''), (N'В очереди'), (N'В ремонте'), (N'Готов');
+
+INSERT INTO Orders VALUES (1, 2, N'Перестал включаться', 1, 1),
+(2, 2, N'Не выводит изображение', 3, 3),
+(3, 3, N'Не работает печать', 2, 1);
