@@ -29,3 +29,7 @@ C:\Users\salavat\Desktop\EquipRemont\EquipRemont\obj\Debug\EquipRemont.exe
 C:\Users\salavat\Desktop\EquipRemont\EquipRemont\obj\Debug\EquipRemont.pdb
 C:\Users\salavat\Desktop\EquipRemont\EquipRemont\obj\Debug\EditComboBox.g.cs
 C:\Users\salavat\Desktop\EquipRemont\EquipRemont\obj\Debug\EditComboBox.baml
+C:\Users\salavat\Desktop\EquipRemont\EquipRemont\obj\Debug\AddOrder.g.cs
+C:\Users\salavat\Desktop\EquipRemont\EquipRemont\obj\Debug\ClientMenu.g.cs
+C:\Users\salavat\Desktop\EquipRemont\EquipRemont\obj\Debug\AddOrder.baml
+C:\Users\salavat\Desktop\EquipRemont\EquipRemont\obj\Debug\ClientMenu.baml

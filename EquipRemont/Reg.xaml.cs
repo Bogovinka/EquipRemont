@@ -26,6 +26,7 @@ namespace EquipRemont
 
         private void reg_Click(object sender, RoutedEventArgs e)
         {
+            //проверка на поля и повтор логина
             DatabaseREntities db = new DatabaseREntities();
             if (loginT.Text != "" && passwordT.Text != "" && surnameT.Text != "" && nameT.Text != ""
                 && db.Users.Where(x => x.Login == loginT.Text).Count() == 0)

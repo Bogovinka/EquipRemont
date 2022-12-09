@@ -27,6 +27,7 @@ namespace EquipRemont
         DatabaseREntities db = new DatabaseREntities();
         private void regB_Click(object sender, RoutedEventArgs e)
         {
+            //добавление нового пользователя
             Reg r = new Reg();
             r.ShowDialog();
             if(r.DialogResult == true)
@@ -46,9 +47,11 @@ namespace EquipRemont
 
         private void loginB_Click(object sender, RoutedEventArgs e)
         {
+            //авторизация с проверкой типа аккаунта
             if (db.Users.Where(x => x.Login == loginText.Text && x.Password == passwordText.Password).Count() > 0)
             {
                 Users user = db.Users.Where(x => x.Login == loginText.Text && x.Password == passwordText.Password).FirstOrDefault();
+                MessageBox.Show($"Вход выполнен за пользователя {user.FullName}");
                 if (user.Type_acc == 1)
                 {
                     AdminMenu am = new AdminMenu();
@@ -57,7 +60,9 @@ namespace EquipRemont
                 }
                 else if (user.Type_acc == 2)
                 {
-
+                    ClientMenu cm = new ClientMenu(user.ID);
+                    cm.Show();
+                    Close();
                 }
             }
             else MessageBox.Show("Ошибка в логине или пароле");
