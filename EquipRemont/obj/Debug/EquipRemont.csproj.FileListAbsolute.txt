@@ -70,3 +70,13 @@ C:\Users\mafak\Desktop\EquipRemont\EquipRemont\obj\Debug\EquipRemont.exe
 C:\Users\mafak\Desktop\EquipRemont\EquipRemont\obj\Debug\EquipRemont.pdb
 C:\Users\mafak\Desktop\EquipRemont\EquipRemont\obj\Debug\EditUser.g.cs
 C:\Users\mafak\Desktop\EquipRemont\EquipRemont\obj\Debug\EditUser.baml
+C:\Users\mafak\Desktop\EquipRemont\EquipRemont\bin\Debug\MaterialDesignColors.dll
+C:\Users\mafak\Desktop\EquipRemont\EquipRemont\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\mafak\Desktop\EquipRemont\EquipRemont\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\mafak\Desktop\EquipRemont\EquipRemont\bin\Debug\MaterialDesignColors.pdb
+C:\Users\mafak\Desktop\EquipRemont\EquipRemont\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\mafak\Desktop\EquipRemont\EquipRemont\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\mafak\Desktop\EquipRemont\EquipRemont\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\mafak\Desktop\EquipRemont\EquipRemont\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\mafak\Desktop\EquipRemont\EquipRemont\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\mafak\Desktop\EquipRemont\EquipRemont\obj\Debug\App.baml
