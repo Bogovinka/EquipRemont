@@ -35,13 +35,23 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Пользователи">
-                <DataGrid IsReadOnly="True" x:Name="dgUser" AutoGenerateColumns="False">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Клиент" Binding="{Binding FullName}"></DataGridTextColumn>
-                        <DataGridTextColumn Header="Логин" Binding="{Binding Login}"></DataGridTextColumn>
-                        <DataGridTextColumn Header="Пароль" Binding="{Binding Password}"></DataGridTextColumn>
-                    </DataGrid.Columns>
-                </DataGrid>
+                <Grid>
+                    <DataGrid IsReadOnly="True" x:Name="dgUser" AutoGenerateColumns="False" Margin="0,0,0,30">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Клиент" Binding="{Binding FullName}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Логин" Binding="{Binding Login}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Пароль" Binding="{Binding Password}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal">
+                        <TextBox Width="200" MaxWidth="200" x:Name="searchT"></TextBox>
+                        <Button x:Name="search" Click="search_Click" Margin="10,0,0,0">Найти</Button>
+                        <Button x:Name="editB" Click="editB_Click" Margin="10,0,10,0">Изменить</Button>
+                        <Button x:Name="delB" Click="delB_Click">Удалить</Button>
+                    </StackPanel>
+                </Grid>
+                
+                
             </TabItem>
         </TabControl>
     </Grid>

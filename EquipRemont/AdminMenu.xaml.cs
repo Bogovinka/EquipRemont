@@ -80,5 +80,43 @@ namespace EquipRemont
                 Close();
             }
         }
+
+        private void search_Click(object sender, RoutedEventArgs e)
+        {
+            dgUser.ItemsSource = db.Users.Where(x => x.Surname.Contains(searchT.Text)).ToList();
+        }
+
+        private void editB_Click(object sender, RoutedEventArgs e)
+        {
+            if(dgUser.SelectedItem != null)
+            {
+                Users us = (Users)dgUser.SelectedItem;
+                EditUser eU = new EditUser(us);
+                if(eU.ShowDialog() == true)
+                {
+                    us.Surname = eU.surnameT.Text;
+                    us.Name = eU.nameT.Text;
+                    us.Login = eU.loginT.Text;
+                    us.Password= eU.passwordT.Text;
+                    db.SaveChanges();
+                    dgUser.ItemsSource = db.Users.Where(x => x.Surname.Contains(searchT.Text)).ToList();
+                }
+            }
+        }
+
+        private void delB_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgUser.SelectedItem != null)
+            {
+                Users us = (Users)dgUser.SelectedItem;
+                if (us.Login != "admin")
+                {
+                    db.Users.Remove(us);
+                    db.SaveChanges();
+                    dgUser.ItemsSource = db.Users.Where(x => x.Surname.Contains(searchT.Text)).ToList();
+                }
+                else MessageBox.Show("Не удаляй админа");
+            }
+        }
     }
 }
